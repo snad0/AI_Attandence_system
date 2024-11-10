@@ -1,0 +1,224 @@
+/* style.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.left-top {
+    flex: 2;
+    margin-right: 20px;
+}
+
+.right-top {
+    flex: 1;
+}
+
+
+
+/* #resident-form {
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    padding: 15px;
+    background-color: #fafafa;
+}
+
+#resident-form h3 {
+    margin-top: 0;
+}
+
+#resident-form label {
+    display: block;
+    margin-top: 10px;
+}
+
+#resident-form input {
+    width: 100%;
+    padding: 5px;
+    margin-top: 5px;
+}
+
+#resident-form button {
+    margin-top: 15px;
+    margin-right: 10px;
+} */
+
+#camera-feed {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+}
+
+.logs-section {
+    margin-top: 20px;
+}
+
+#logs {
+    border: 1px solid #110202;
+    padding: 10px;
+    max-height: 200px;
+    overflow-y: auto;
+    background-color: #2100de;
+}
+
+#logs p {
+    margin: 5px 0;
+    font-size: 12px; /* Smaller font */
+    white-space: pre-wrap; /* Keeps formatting for terminal look */
+}
+
+.logs-section {
+    margin-top: 10px;
+    background-color: #1e1e1e; /* Dark background for terminal effect */
+    color: #d4d4d4; /* Light text */
+    padding: 15px;
+    border-radius: 8px;
+    font-family: monospace; /* Monospaced font for terminal look */
+    /* max-height: 200px; */
+    overflow-y: auto;
+    
+}
+
+/* Camera Feed Styling */
+#camera-feed {
+    width: 100%;
+    max-width: 400px; /* Adjust width as needed */
+    height: auto;
+    border: 3px solid #676869; /* Border color to match theme */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    margin-top: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Additional styling for camera container */
+.right-top {
+    text-align: center; /* Center-align the camera feed */
+    padding: 15px;
+    background-color: #706d6d; /* Light background for contrast */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 450px; /* Optional: Set a max width for container */
+    margin: 20px auto;
+}
+.right-top1 {
+    text-align: center; /* Center-align the camera feed */
+    padding: 15px;
+    background-color: #fcfcfc; /* Light background for contrast */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 450px; /* Optional: Set a max width for container */
+    margin: 20px auto;
+}
+
+
+/* Add Resident Button Styling */
+#add-resident-btn {
+    display: inline-block;
+    background-color: #007bff; /* Primary color */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+    text-align: center;
+}
+
+#add-resident-btn:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+/* Add Resident Form Styling */
+#resident-form {
+    display: none; /* Initially hidden */
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    max-width: 400px;
+    margin-top: 20px;
+}
+
+#resident-form h3 {
+    margin-top: 0;
+    color: #007bff; /* Matches button color */
+}
+
+#resident-form label {
+    display: block;
+    font-size: 14px;
+    margin-top: 10px;
+    color: #333;
+}
+
+#resident-form input[type="text"],
+#resident-form input[type="file"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px;
+    color: #333;
+}
+
+#resident-form button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 15px;
+    display: inline-block;
+}
+
+#resident-form button:hover {
+    background-color: #0056b3;
+}
+
+#cancel-btn {
+    background-color: #6c757d;
+    color: #fff;
+    margin-left: 10px;
+}
+
+#cancel-btn:hover {
+    background-color: #5a6268;
+}
+
+/* Attendance Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+table th {
+    background-color: #007bff;
+    color: #fff;
+}
+
+/* Aesthetic Background */
+html, body {
+    height: 100%;
+}

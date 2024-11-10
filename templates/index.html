@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Attendance System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Left Top: Attendance Table -->
+        <div class="left-top">
+            <h2>Entries</h2>
+            <table id="attendance-table">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Name</th>
+                        <th>Entry Time</th>
+                        <th>Exit Time</th>
+                        <th>Re-Entry</th>
+                        <th>Re-Entry Time</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for row in attendance_data %}
+                    <tr>
+                        <td>{{ row[0] }}</td>
+                        <td>{{ row[1] }}</td>
+                        <td>{{ row[2] }}</td>
+                        <td>{{ row[3] }}</td>
+                        <td>{{ row[4] }}</td>
+                        <td>{{ row[5] }}</td>
+                        <td>{{ row[6] }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <button id="add-resident-btn">Add Resident</button>
+            <!-- Resident Form -->
+            <div id="resident-form" style="display: none;">
+                <h3>Add New Resident</h3>
+                <form id="resident-form-form">
+                    <label for="resident-name">Name:</label>
+                    <input type="text" id="resident-name" name="name" required>
+
+                    <label for="resident-address">Address:</label>
+                    <input type="text" id="resident-address" name="address" required>
+
+                    <label for="resident-block">Block No:</label>
+                    <input type="text" id="resident-block" name="block_no" required>
+
+                    <label for="resident-type">Resident Type:</label>
+                    <input type="text" id="resident-type" name="resident_type" required>
+
+                    <label for="resident-image">Image:</label>
+                    <input type="file" id="resident-image" name="image" accept="image/*" required>
+
+                    <button type="submit">Submit</button>
+                    <button type="button" id="cancel-btn">Cancel</button>
+                </form>
+            </div>
+        </div>
+        <!-- Right Top: Camera Feed and Logs -->
+        <div class="right-top1">
+            <div class="right-top">
+                <h2>Live Camera Feed</h2>
+                <img id="camera-feed" src="{{ url_for('video_feed') }}" alt="Camera Feed">
+            </div>
+
+            <!-- Logs Section -->
+            <div class="logs-section">
+                <h2>Logs</h2>
+                <div id="logs">
+                    <!-- Logs will be dynamically loaded here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
