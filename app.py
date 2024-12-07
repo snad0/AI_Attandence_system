@@ -62,6 +62,7 @@ def mark_attendance(name):
     
     now = datetime.now()
     date_today = now.date()
+    #44
     current_time = now.strftime('%H:%M:%S')
     
     # Check if an entry exists for the resident today
